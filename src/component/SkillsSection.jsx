@@ -19,93 +19,80 @@ import HuggingFace from '../assets/icons8-hugging-face-480.png'
 import Keras from '../assets/icons8-keras-480.png'
 
 const SkillsSection = () => {
-  return (
-    <div id='skills'>
-        <h1 className='text-center text-2xl sm:text-5xl text-violet-400 pt-20' style={{ fontFamily: '"Bebas Neue", sans-serif' }}>Skills</h1>
-        <h1 className='text-center text-sm sm:text-xl text-gray-400' style={{ fontFamily: '"Bebas Neue", sans-serif' }}>Tools & Tech</h1>
-        <div className='py-20'>
-            <div className='grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-7 p-5 sm:mx-20'>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={C} alt="C"/>
-                    <p className='text-xs sm:text-base'>C</p>
+
+
+    // if you want to add new skills, then add inside the array of objects!
+    // for Image to work you have to import it like you can see right now at the top
+    // image files are currently stored in assets folder (every media files)
+
+    // the below array of object belongs to TECH/TOOL section of Skills
+    const skillTech = [
+        { text: 'C', img: C },
+        { text: 'Python', img: Python },
+        { text: 'JavaScript', img: JS },
+        { text: 'MySQL', img: MySQL },
+        { text: 'Git', img: Git },
+        { text: 'Github', img: Github },
+        { text: 'Jira', img: Jira },
+        { text: 'HTML', img: HTML },
+        { text: 'CSS', img: CSS }
+    ]
+
+
+    // the below array of object belongs to LIBRARIES section of Skills
+    const skillLibrary = [
+        { text: 'TensorFlow', img: TensorFlow },
+        { text: 'PyTorch', img: PyTorch },
+        { text: 'scikit-learn', img: scikitlearn },
+        { text: 'pandas', img: pandas },
+        { text: 'numpy', img: numpy },
+        { text: 'Matplotlib', img: Matplotlib },
+        { text: 'seaborn', img: seaborn },
+        { text: 'Hugging Face', img: HuggingFace },
+        { text: 'Keras', img: Keras }
+    ]
+
+
+    return (
+        <div id='skills'>
+            <h1 className='text-center text-2xl sm:text-5xl text-violet-400 pt-20' style={{ fontFamily: '"Bebas Neue", sans-serif' }}>Skills</h1>
+            <h1 className='text-center text-sm sm:text-xl text-gray-400' style={{ fontFamily: '"Bebas Neue", sans-serif' }}>Tools & Tech</h1>
+            <div className='py-20'>
+                <div className='grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-7 p-5 sm:mx-20'>
+                    {
+                        skillTech?.length > 0 ? (
+                            skillTech.map(skills => (
+                                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
+                                    <img width={'150px'} src={skills.img} alt="C" />
+                                    <p className='text-xs sm:text-base'>{skills.text}</p>
+                                </div>
+                            ))
+
+                        ) :
+                            <p>Add Skills</p>
+                    }
                 </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={Python} alt="Python"/>
-                    <p className='text-xs sm:text-base'>Python</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={JS} alt="JS"/>
-                    <p className='text-xs sm:text-base'>JavaScript</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={MySQL} alt="MySQL"/>
-                    <p className='text-xs sm:text-base'>MySQL</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={Git} alt="Git"/>
-                    <p className='text-xs sm:text-base'>Git</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={Github} alt="Github"/>
-                    <p className='text-xs sm:text-base'>Github</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={Jira} alt="Jira"/>
-                    <p className='text-xs sm:text-base'>Jira</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={HTML} alt="HTML"/>
-                    <p className='text-xs sm:text-base'>HTML</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={CSS} alt="CSS"/>
-                    <p className='text-xs sm:text-base'>CSS</p>
+            </div>
+            <h1 className='text-center text-sm sm:text-xl text-gray-400' style={{ fontFamily: '"Bebas Neue", sans-serif' }}>Libraries</h1>
+            <div className='py-20'>
+                <div className='grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-7 p-5 sm:mx-20'>
+                    {
+                        skillLibrary?.length > 0 ? (
+                            skillLibrary.map(skills => (
+                                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
+                                    <img width={'150px'} src={skills.img} alt="TensorFlow" />
+                                    <p className='text-xs sm:text-base'>{skills.text}</p>
+                                </div>
+                            ))
+
+                        )
+                            :
+                            <p>Add Skills</p>
+                    }
                 </div>
             </div>
         </div>
-        <h1 className='text-center text-sm sm:text-xl text-gray-400' style={{ fontFamily: '"Bebas Neue", sans-serif' }}>Libraries</h1>
-        <div className='py-20'>
-            <div className='grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-7 p-5 sm:mx-20'>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={TensorFlow} alt="TensorFlow"/>
-                    <p className='text-xs sm:text-base'>TensorFlow</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={PyTorch} alt="PyTorch"/>
-                    <p className='text-xs sm:text-base'>PyTorch</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={scikitlearn} alt="scikitlearn"/>
-                    <p className='text-xs sm:text-base'>scikit-learn</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={pandas} alt="pandas"/>
-                    <p className='text-xs sm:text-base'>pandas</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={numpy} alt="numpy"/>
-                    <p className='text-xs sm:text-base'>numpy</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={Matplotlib} alt="Matplotlib"/>
-                    <p className='text-xs sm:text-base'>Matplotlib</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={seaborn} alt="seaborn"/>
-                    <p className='text-xs sm:text-base'>seaborn</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img  width={'150px'} src={HuggingFace} alt="HuggingFace"/>
-                    <p className='text-xs sm:text-base'>Hugging Face</p>
-                </div>
-                <div className='rounded-3xl w-full flex flex-col justify-center items-center p-5 backdrop-blur-3xl bg-violet-500/5 hover:shadow-[0_0_20px_1px_#a78bfa]'>
-                    <img width={'150px'} src={Keras} alt="Keras"/>
-                    <p className='text-xs sm:text-base'>Keras</p>
-                </div>
-            </div>
-        </div>
-    </div>
-  )
+    )
 }
 
 export default SkillsSection
