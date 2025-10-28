@@ -3,13 +3,13 @@ import AboutIMG from '../assets/about2.png'
 
 const AboutSection = () => {
     return (
-        <div id='about' className='h-screen'>
-            <h1 className='text-center text-5xl text-violet-400 pt-20' style={{ fontFamily: '"Bebas Neue", sans-serif' }}>About Me</h1>
+        <div id='about' className='min-h-screen'>
+            <h1 className='text-center text-2xl sm:text-5xl text-violet-400 pt-20' style={{ fontFamily: '"Bebas Neue", sans-serif' }}>About Me</h1>
             <div className='grid grid-cols-5'>
-                <div className='col-span-2 flex justify-center items-center'>
+                <div className='col-span-5 sm:col-span-2 flex justify-center items-center'>
                     <img className='' src={AboutIMG} alt="ABOUT" />
                 </div>
-                <div className='col-span-3 p-20 leading-10 text-xl'>
+                <div className=' col-span-5 sm:col-span-3 sm:p-20 p-5 sm:leading-10 text-sm sm:text-xl'>
                     <p>
                         I’m Albert Justin, a Machine Learning Engineer dedicated to building intelligent, scalable
                         solutions that address real-world challenges. My focus is on harnessing AI to create meaningful
