@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+
+html {
+  user-select: none;
+  -webkit-user-drag: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  background-image: radial-gradient(#542A82 0%, #11071F 20%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
