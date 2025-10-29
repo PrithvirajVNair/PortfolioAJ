@@ -11,6 +11,7 @@ const HomeSection = () => {
                 <div className='mt-3'>
                     <a href='#' className='border rounded p-2 absolute hover:bg-violet-400'><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href='#' className='border rounded p-2 absolute ml-15 hover:bg-violet-400'><i class="fa-brands fa-github"></i></a>
+                    <a href='#' className='block sm:hidden text-xs sm:text-xl border absolute ml-30 border-purple-950 rounded p-3 hover:bg-violet-400' style={{ fontFamily: ' "Michroma", sans-serif' }}>Resume</a>
                 </div>
             </div>
         </div>
