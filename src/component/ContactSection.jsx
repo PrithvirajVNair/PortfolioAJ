@@ -6,8 +6,8 @@ const ContactSection = () => {
             <h1 className='text-center text-2xl sm:text-5xl text-violet-400 pt-20' style={{ fontFamily: '"Bebas Neue", sans-serif' }}>Contact</h1>
             <h1 className='text-center text-sm sm:text-xl text-gray-400' style={{ fontFamily: '"Bebas Neue", sans-serif' }}>Socials</h1>
             <div className='mt-5'>
-                    <a href='#' className='border rounded p-2 hover:bg-violet-400'><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href='#' className='border rounded p-2 ml-5 hover:bg-violet-400'><i class="fa-brands fa-github"></i></a>
+                    <a href='#' className='border rounded p-2 backdrop-blur-xl hover:bg-violet-400'><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href='#' className='border rounded p-2 ml-5 backdrop-blur-xl hover:bg-violet-400'><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     )

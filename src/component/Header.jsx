@@ -38,7 +38,7 @@ const Header = () => {
                     </div>
                     <div>
                         <div className='hidden sm:block absolute right-10'>
-                            <a href='#' className='text-xl border border-purple-950 rounded p-2 hover:bg-violet-400' style={{ fontFamily: ' "Michroma", sans-serif' }}>Resume</a>
+                            <a href='#' className='text-xl border border-purple-950 rounded p-2 backdrop-blur-xl hover:bg-violet-400' style={{ fontFamily: ' "Michroma", sans-serif' }}>Resume</a>
                         </div>
                         <div className='sm:hidden absolute right-10'>
                             <button onClick={toggleMenu} className='absolute' ><i class={`fa-solid ${menuOpen ? 'fa-xmark' : 'fa-bars'} text-2xl`}></i></button>
